@@ -1518,8 +1518,7 @@ _rclc_execute(rclc_executor_handle_t * handle)
             handle->action_client->goal_callback(
               goal_handle, goal_handle->goal_accepted,
               handle->callback_context);
-            if (!goal_handle->goal_accepted ||
-              RCL_RET_OK != rclc_action_send_result_request(goal_handle))
+            if (!goal_handle->goal_accepted )
             {
               rclc_action_remove_used_goal_handle(handle->action_client, goal_handle);
             } else {
