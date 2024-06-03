@@ -119,6 +119,11 @@ rclc_action_send_goal_request(
   void * ros_request,
   rclc_action_goal_handle_t ** goal_handle);
 
+rcl_ret_t
+rclc_action_send_result_request(
+  rclc_action_goal_handle_t * goal_handle);
+
+
 /**
  *  Send a cancel request for a goal to an action server.
  *
